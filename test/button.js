@@ -1,5 +1,5 @@
-var MockFirmata = require("./util/mock-firmata");
 var sinon = require("sinon");
+var MockFirmata = require("./util/mock-firmata");
 var EV3 = require("../lib/ev3");
 var five = require("../lib/johnny-five");
 var Button = five.Button;
@@ -8,7 +8,7 @@ var io = new MockFirmata();
 var board = new five.Board({
   debug: false,
   repl: false,
-  io: io
+  io: io,
 });
 
 io.emit("ready");
